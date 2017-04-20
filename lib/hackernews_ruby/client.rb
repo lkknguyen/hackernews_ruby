@@ -54,6 +54,14 @@ module HackernewsRuby
       get(url, params)
     end
 
+    #newstories returns an array of the new 500 stories
+    #HackernewsRuby::Client.new.new_stories
+
+    def new_stories(params={})
+      url = "/#{HackernewsRuby.api_version}/newstories.json"
+      get(url, params)
+    end
+
     #changed returns a hash of updates for profiles and items
     #HackernewsRuby::Client.new.changed
 
